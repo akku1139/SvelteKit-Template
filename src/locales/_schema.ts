@@ -1,4 +1,2 @@
-type schema = {
-}
-
-export default schema;
+export type schema = {
+};
