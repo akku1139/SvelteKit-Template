@@ -1,2 +1,8 @@
 タブとインデントルール
 https://moneyforward-dev.jp/entry/2017/06/20/eslint/
+
+最終行
+インデント2スペース
+
+i18nでlangがeslintでエラーでないように
+svelte/storeとか?
