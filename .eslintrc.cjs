@@ -3,6 +3,9 @@ module.exports = {
   rules: {
     semi: ["error", "always"],
     "comma-dangle": ["error", "always-multiline"],
+    "no-else-return": ["error", {allowElseIf: false}],
+    "no-lonely-if": "error",
+    "no-tabs": "error,"
   },
   root: true,
   extends: [
@@ -30,5 +33,5 @@ module.exports = {
         parser: '@typescript-eslint/parser'
       }
     }
-  ]
+  ],
 };
