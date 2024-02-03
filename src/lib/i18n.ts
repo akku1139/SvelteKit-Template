@@ -10,10 +10,6 @@ const locales = {
   ja: ja,
 };
 
-export function t(name: string): string {
-  return locales[lang][name];
-}
-
 export const t = derived(
   lang,
   $lang => {
