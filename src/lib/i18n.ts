@@ -4,7 +4,7 @@ import type { langs, schema } from "../locales/$schema.ts";
 import en from "../locales/en.ts";
 import ja from "../locales/ja.ts";
 
-const locales: {langs: schema} = {
+const locales = {
   en: en,
   ja: ja,
 };
@@ -16,5 +16,5 @@ export const t = derived(
   lang,
   ($lang: langs) =>
     (msg: keyof locales[langs]) =>
-      locales[$lang][msg]
+      locales[$lang][msg],
 );
