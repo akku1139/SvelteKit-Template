@@ -4,7 +4,7 @@ import type { langs, schema } from "../locales/$schema.ts";
 import en from "../locales/en.ts";
 import ja from "../locales/ja.ts";
 
-const locales = {
+const locales: {langs: schema} = {
   en: en,
   ja: ja,
 };
@@ -15,7 +15,6 @@ export const lang = writable<langs>("en");
 export const t = derived(
   lang,
   ($lang: langs) =>
-    (msg: keyof locales[langs]) => {
-      return locales[$lang][msg];
-    },
+    (msg: keyof locales[langs]) =>
+      locales[$lang][msg]
 );
