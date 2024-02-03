@@ -1,4 +1,4 @@
-import type { schema } from "./_schema.ts";
+import type { schema } from "./$schema.ts";
 
 export default {
   langname: "English",
