@@ -12,7 +12,7 @@ const locales = {
 
 export const t = derived(
   lang,
-  ($lang) => (msg) => {
+  ($lang) => (msg: string) => {
     return locales[$lang][msg];
   },
 );
