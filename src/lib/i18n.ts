@@ -12,8 +12,7 @@ const locales = {
 
 export const t = derived(
   lang,
-  () => (msg) => {
-    //return locales[$lang][msg];
-    return locales[get(lang)][msg];
+  ($lang) => (msg) => {
+    return locales[$lang][msg];
   }
 )
