@@ -21,7 +21,7 @@ export const t = derived(
     locale = await import("../locales/"+$lang+".ts");
     return (msg) => {
       return locale[msg];
-    }
+    };
   },
 );
 
