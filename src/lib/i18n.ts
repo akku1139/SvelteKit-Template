@@ -9,11 +9,12 @@ const locales = {
 };
 
 export const lang = writable("en");
+const localetype = Object.keys(en);
 
 export const t = derived(
   lang,
   ($lang: keyof typeof locales) =>
-    (msg) => {
+    (msg: typeof localetype) => {
       return locales[$lang][msg];
     },
 );
