@@ -13,7 +13,7 @@ const locales = {
 export const t = derived(
   lang,
   ($lang: keyof typeof locales) =>
-    (msg: string) => {
+    (msg) => {
       return locales[$lang][msg];
     },
 );
