@@ -5,7 +5,8 @@ module.exports = {
     "comma-dangle": ["error", "always-multiline"],
     "no-else-return": ["error", {allowElseIf: false}],
     "no-lonely-if": "error",
-    "no-tabs": "error,"
+    "no-tabs": "error",
+    "eol-last": ["error", "always"],
   },
   root: true,
   extends: [
