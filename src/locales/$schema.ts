@@ -8,4 +8,7 @@ const langs = [
   "ja",
 ] as const;
 
-export type langs = typeof langs[number];
+export type langs =
+  "en" |
+  "ja"
+;

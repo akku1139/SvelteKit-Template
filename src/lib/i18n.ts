@@ -1,5 +1,9 @@
 import { writable, derived } from "svelte/store";
-import type { langs } from "../locales/$schema.ts";
+//import type { langs } from "../locales/$schema.ts";
+type langs =
+  "en" |
+  "ja"
+;
 
 import en from "../locales/en.ts";
 import ja from "../locales/ja.ts";
@@ -16,8 +20,8 @@ export const lang = writable<langs>("en");
 
 export const t = derived(
   lang,
-  ($lang: langs) =>
-    (msg: keyof locales[langs]) => {
+  ($lang) =>
+    (msg) => {
       return locales[$lang][msg];
     },
 );
