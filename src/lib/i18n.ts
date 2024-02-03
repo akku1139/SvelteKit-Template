@@ -13,7 +13,7 @@ export const lang = writable<keyof locales>("en");
 
 export const t = derived(
   lang,
-  ($lang: keyof locales) =>
+  ($lang) =>
     (msg: keyof locales[typeof $lang]) => {
       return locales[$lang][msg];
     },
