@@ -1,4 +1,4 @@
-import { writable, derived, get } from "svelte/store";
+import { writable, derived } from "svelte/store";
 
 export const lang = writable("en");
 
@@ -14,5 +14,5 @@ export const t = derived(
   lang,
   ($lang) => (msg) => {
     return locales[$lang][msg];
-  }
-)
+  },
+);
