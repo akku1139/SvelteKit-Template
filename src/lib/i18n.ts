@@ -1,5 +1,5 @@
 import { writable, derived } from "svelte/store";
-import { langs, type langs } from "../locales/$schema.ts";
+import type { langs } from "../locales/$schema.ts";
 
 import en from "../locales/en.ts";
 import ja from "../locales/ja.ts";

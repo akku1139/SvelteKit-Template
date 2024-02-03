@@ -3,7 +3,7 @@ export type schema = {
   langname_en: string;
 };
 
-export const langs = [
+const langs = [
   "en",
   "ja",
 ] as const;
