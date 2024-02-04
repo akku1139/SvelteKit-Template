@@ -7,10 +7,9 @@ const locales = {
   en: en,
   ja: ja,
 };
-
-export const lang = writable("en");
-
 type langs = keyof typeof locales;
+
+export const lang = writable<langs>("en");
 
 export const t = derived(
   lang,
