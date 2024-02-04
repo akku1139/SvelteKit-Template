@@ -7,13 +7,12 @@ const locales = {
   en: en,
   ja: ja,
 };
-//type locales = keyof typeof locales;
-/*<locales>*/
+
 export const lang = writable("en");
 
 export const t = derived(
   lang,
   ($lang) =>
-    (msg) =>
+    (msg: keyof typeof locales) =>
       locales[$lang][msg],
 );

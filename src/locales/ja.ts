@@ -1,6 +1,6 @@
-import type { schema } from "./$schema.ts";
+import type { Schema } from "./$schema.ts";
 
 export default {
   langname: "日本語",
   langname_en: "Japanese",
-} as const satisfies schema;
+} as const satisfies Schema;
